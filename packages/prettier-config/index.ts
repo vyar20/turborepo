@@ -1,1 +1,1 @@
-export * from './prettierrc';
+export default './prettierrc';
