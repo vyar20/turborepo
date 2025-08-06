@@ -1,0 +1,13 @@
+{
+  "name": "@repo/validations",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "type": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@repo/ts-config": "*"
+  }
+}

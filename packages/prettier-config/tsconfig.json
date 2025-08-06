@@ -1,0 +1,10 @@
+{
+  "extends": "./node_modules/@repo/ts-config/tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

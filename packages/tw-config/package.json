@@ -1,0 +1,10 @@
+{
+  "name": "@repo/tw-config",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "default": "./tailwind.config.ts"
+    }
+  }
+}

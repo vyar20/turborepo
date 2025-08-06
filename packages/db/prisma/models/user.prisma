@@ -1,0 +1,16 @@
+model User {
+    id        String   @id @default(cuid())
+    email     String   @unique
+    name      String?
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    role      UserRole @default(USER) // Default role is USER
+    isActive  Boolean  @default(true) // Indicates if the user is active
+
+    @@map("users")
+}
+
+enum UserRole {
+    USER
+    ADMIN
+}
