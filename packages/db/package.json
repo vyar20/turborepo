@@ -5,13 +5,15 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "db": "prisma db push"
+    "db": "prisma generate --schema=./prisma/schema.prisma",
+    "build": "pnpm db && tsc"
   },
   "devDependencies": {
     "@repo/ts-config": "*",
     "prisma": "^6.13.0"
   },
   "dependencies": {
-    "@prisma/client": "6.13.0"
+    "@prisma/client": "6.13.0",
+    "dotenv": "^17.2.1"
   }
 }

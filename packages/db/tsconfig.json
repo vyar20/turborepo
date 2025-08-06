@@ -2,10 +2,12 @@
   "extends": "@repo/ts-config/tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "rootDir": "./src",
     "outDir": "dist",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"]
     }
   },
-  "include": ["prisma.config.ts", "src/**/*.ts"]
+  "include": ["src/**/*", "./src/generated/*"],
+  "exclude": ["prisma.config.ts"]
 }

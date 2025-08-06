@@ -1,16 +1,13 @@
-import { PrismaClient } from '@/generated/prisma';
 import 'dotenv/config';
+export * from '../generated/prisma';
+import { PrismaClient } from '../generated/prisma';
 
-const globalForPrisma = globalThis as unknown as {
-  db: PrismaClient;
-};
+const globalForPrisma = global as unknown as { db: PrismaClient };
 
 export const db =
   globalForPrisma.db ||
   new PrismaClient({
-    log: process.env.NODE_ENV === 'development' ? ['info', 'warn'] : ['error'],
+    log: ['query', 'info', 'warn', 'error'],
   });
 
-if (process.env.NODE_ENV !== 'production') {
-  globalForPrisma.db = db;
-}
+if (process.env.NODE_ENV !== 'production') globalForPrisma.db = db;
